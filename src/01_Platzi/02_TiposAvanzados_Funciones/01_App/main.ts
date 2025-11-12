@@ -10,10 +10,13 @@ addProduct({
   id: 1,
   title: 'xbox one',
   createdAt: new Date(),
+  updatedAt: new Date(),
   stock: 90,
   category: {
     id: 1,
-    name: "electronics"
+    name: "electronics",
+    createdAt: new Date(),
+    updatedAt: new Date(),
   }
 });
 
