@@ -28,5 +28,3 @@ console.log("responseString: " + responseString);
 if (typeof responseString === 'string') {
   console.log(responseString.toLocaleLowerCase());
 }
-
-
