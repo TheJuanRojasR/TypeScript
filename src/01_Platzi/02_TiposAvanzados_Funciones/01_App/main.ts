@@ -9,7 +9,7 @@ import { faker } from '@faker-js/faker'; // Clase 15: Libreria que crea datos ra
 
 for (let i = 0; i < 30; i++) {
   addProduct({
-  id: faker.string.ulid(),
+  // id: faker.string.ulid(),
   title: faker.commerce.productName(),
   image: faker.image.url(),
   description: faker.commerce.productDescription(),
@@ -17,16 +17,17 @@ for (let i = 0; i < 30; i++) {
   size: faker.helpers.arrayElement(['S', 'M', 'L', 'XL']),
   price: parseInt(faker.commerce.price(), 10),
   isNew: faker.datatype.boolean(),
-  createdAt: faker.date.recent(),
-  updatedAt: faker.date.recent(),
+  // createdAt: faker.date.recent(),
+  // updatedAt: faker.date.recent(),
   stock: faker.number.int({min: 10, max: 200}),
   tags: faker.lorem.words(faker.number.int({ min: 0, max: 3 })).split(' '),
-  category: {
-    id: faker.string.ulid(),
-    name: faker.commerce.department(),
-    createdAt: faker.date.recent(),
-    updatedAt: faker.date.recent(),
-  }
+  // category: {
+    // id: faker.string.ulid(),
+    // name: faker.commerce.department(),
+    // createdAt: faker.date.recent(),
+    // updatedAt: faker.date.recent(),
+  // }
+  categoryId: faker.string.ulid(),
 });
 }
 
