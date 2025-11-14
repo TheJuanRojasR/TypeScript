@@ -21,3 +21,8 @@ export interface CreateProductDto extends Omit<ProductInterface, 'id' | "created
 
 // Hacemos el Partial de CreateProductDto ya que tiene las propiedades que si podemos modificar y que tiene categoryId en lugar de category
 export interface UpdateProductDto extends Partial<CreateProductDto> {}
+
+// Clase 19
+// Readonly: Es un utility type que convierte todas las propidades de un tipo/interface en solo lectura y no se podran modificar
+
+export interface FiendProductDto extends Readonly<Partial<ProductInterface>> {}

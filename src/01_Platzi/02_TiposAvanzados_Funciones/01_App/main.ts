@@ -4,7 +4,7 @@
 // Estructura complejas (codebase complejo): es un codigo dificil de entender, que tiene muchas partes interdependientes, que si se cambia algo afecta a todo el programa, desorganizado y mezclando responsabilidades. Para solucionar eso en esta clase utilizamos la estructura por feature/entidad (vertical slices / modular).
 // Estructura por feature/entidad (vertical slices / modular): En lugar de hacer todo en un archivo o por tipo de archivo, lo agrupamos por funcionalidad o dominio.
 
-import { addProduct, products, updateProduct } from "./products/product.service.js"
+import { addProduct, products, updateProduct, findProducts } from "./products/product.service.js"
 import { faker } from '@faker-js/faker'; // Clase 15: Libreria que crea datos randoms
 
 for (let i = 0; i < 5; i++) {
@@ -41,5 +41,10 @@ if (product) {
 }))
 }
 
+findProducts({
+  // Los que cumplan con las siguientes caracteristicas seran retornados
+  stock: 10,
+  color: 'red',
+})
 
 

@@ -3,6 +3,7 @@
 import { UpdateProductDto } from "./product.dto.js";
 import { ProductInterface } from "./product.model.js"
 import { CreateProductDto } from "./product.dto.js";
+import { FiendProductDto } from "./product.dto.js";
 import { faker } from '@faker-js/faker';
 
 // Clase 13
@@ -46,4 +47,11 @@ export function updateProduct (id: string, changes: UpdateProductDto): ProductIn
   // 4. Modificando el producto
   products[index] = updatedProduct;
   return updatedProduct;
+}
+
+// Problemas: Podemos modificar los datos que vangan si no tenemos un Readonly en el Dto
+// Ahora con el Readonly, tenemos la flexibilidad de mandar cualquier campo pero no poderlos modificar
+export function findProducts (dto: FiendProductDto): ProductInterface[] {
+  // dto.color = 'red'; Error
+  return products;
 }
