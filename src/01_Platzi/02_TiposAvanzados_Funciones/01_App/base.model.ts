@@ -9,7 +9,7 @@
 
 // Si quisiera que el id fuera string solo lo cambio aca y no en todos los modelos.
 export interface BaseModelInterface {
-  readonly id: string | number;
+  readonly id: string;
   readonly createdAt: Date;
   updatedAt: Date;
 }

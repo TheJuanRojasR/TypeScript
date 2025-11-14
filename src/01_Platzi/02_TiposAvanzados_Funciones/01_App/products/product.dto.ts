@@ -15,3 +15,9 @@ export interface CreateProductDto extends Omit<ProductInterface, 'id' | "created
   categoryId: string;
 }
 
+// Clase 18
+// Partial : Convierte las propiedades de un tipo/interface en opcionales
+// Required : Convierte las propiedades de un tipo/interface en obligatorias
+
+// Hacemos el Partial de CreateProductDto ya que tiene las propiedades que si podemos modificar y que tiene categoryId en lugar de category
+export interface UpdateProductDto extends Partial<CreateProductDto> {}
