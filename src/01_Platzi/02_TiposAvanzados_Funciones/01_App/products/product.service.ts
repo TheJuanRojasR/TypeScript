@@ -29,7 +29,11 @@ export function addProduct (data: CreateProductDto): ProductInterface {
   return (newProduct);
 }
 
-export function updateProduct (id: string, changes: UpdateProductDto): ProductInterface | null {
+// Clase 20
+// Accerder tipado por el indice: Es una forma de extraer el tipo de dato de una propiedad especifica de un objeto/interface usando una sintaxis como cuando accedemos a ala propiedad de un objeto. Este nos ayuda a evitar errores manuales. Ya que queda vinculado con el original y si cambia de dato nos mostraria donde posiblemente tendriamos un error.
+// Sintaxis: interface[propiedad] => tipoDeDato
+
+export function updateProduct (id: ProductInterface['id'], changes: UpdateProductDto): ProductInterface | null {
   // 1. Buscando indece del producto
   const index  = products.findIndex(product => product.id === id);
   if (index === -1) return null;
