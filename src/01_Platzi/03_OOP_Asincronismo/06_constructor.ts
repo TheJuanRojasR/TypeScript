@@ -1,7 +1,7 @@
 // 20.11.25
 
 // Clase 6
-// Contructor: Metodo especial de las clases para inicializar las propiedades que va tener estas.
+// Constructor: Metodo especial de las clases para inicializar las propiedades que va tener estas.
 
 class MyDate {
   // private year: number;
