@@ -1,6 +1,6 @@
 // 25.11.25
 
-// Clase 11
+// Clase 10
 // Protected: Este es un modificador de acceso que lo que hace es que la propiedad o el metodo es accesible desde la misma clase donde fue inicializado y sus hijos si hereda pero no es accesible desde el exterior.
 
 // Clase Padre General
