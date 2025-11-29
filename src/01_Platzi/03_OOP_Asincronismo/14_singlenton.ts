@@ -1,7 +1,5 @@
 // 28.11.25
 
-import { ne } from "@faker-js/faker";
-
 // Clase 14
 // Patron Singlenton: Este patro nos evita a que creemos multiples instancias de un mismo objeto. O sea una clase solo puede hacer 1 instancia de un objeto y ya.
 
@@ -61,5 +59,5 @@ console.log(myService1);
 const myService2 = MyService.create("service singlenton 2");
 console.log(myService2);
 
-// Comprobamos que tenga la misma instancia 
+// Comprobamos que tenga la misma instancia
 console.log(myService1 === myService2);
