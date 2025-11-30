@@ -1,7 +1,7 @@
 // 29.11.25
 
 // Clase 15
-// Promesas en TS:
+// Promesas en TS: Estas son iguales a JS simplemente a que tiparlas con lo que va a retornar. Este ejemplo es simple y entrega un string pero en casos reales se utilizan mejor interfaces y creo que genericos.
 
 import axios from "axios";
 
@@ -29,6 +29,9 @@ import axios from "axios";
   async function getProductsAsync () {
     const rta = await axios.get('https://api.escuelajs.co/api/v1/products');
     return rta.data;
+    // Utilizando la desestructuracion
+    // const { data } = await axios.get('https://api.escuelajs.co/api/v1/products');
+    // return data;
   }
 
   console.log('-----------');
