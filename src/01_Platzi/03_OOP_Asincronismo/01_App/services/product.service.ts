@@ -7,6 +7,10 @@ import { faker } from '@faker-js/faker';
 export class ProductMemoryService {
   private products: ProductInterface[] = [];
 
+  getAll () {
+    return this.products;
+  }
+
   create (data: CreateProductDto): ProductInterface {
   const newProduct = {
       ...data,
