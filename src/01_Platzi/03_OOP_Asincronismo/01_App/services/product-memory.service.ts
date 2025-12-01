@@ -1,10 +1,11 @@
-// 12.11.25
+// 30.11.25
 
 import { ProductInterface } from "../models/product.model.js";
 import { CreateProductDto, UpdateProductDto } from "../dtos/product.dto.js";
 import { faker } from '@faker-js/faker';
+import { ProductService } from "../models/product-service.model.js";
 
-export class ProductMemoryService {
+export class ProductMemoryService implements ProductService {
   private products: ProductInterface[] = [];
 
   getAll () {
@@ -36,7 +37,7 @@ export class ProductMemoryService {
     return (product);
   }
 
-  updateProduct (id: ProductInterface['id'], changes: UpdateProductDto): ProductInterface | null {
+  update (id: ProductInterface['id'], changes: UpdateProductDto): ProductInterface | null {
     // 1. Buscando indece del producto
     const index  = this.products.findIndex(product => product.id === id);
     if (index === -1) return null;

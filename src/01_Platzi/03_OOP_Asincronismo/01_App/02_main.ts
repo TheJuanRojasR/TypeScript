@@ -3,7 +3,7 @@
 // Clase 17
 // Consumiendo ProductMemoryService
 
-import { ProductMemoryService } from './services/product.service.js'
+import { ProductMemoryService } from './services/product-memory.service.js'
 
 // Creando una instancia
 const productService = new ProductMemoryService();
